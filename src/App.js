@@ -1,7 +1,9 @@
 import './App.css';
+import {useState} from 'react'
 import Top from './components/Top'
+import {JoinMembership} from './pages/JoinMembership'
 import personImg from './images/icon_person.png'
-import {BrouserRouter, Routes, Route} from 'react-router-dom'
+import {BrouserRouter, Routes, Route, Link} from 'react-router-dom'
 
 
 function Center(props) {
@@ -23,9 +25,17 @@ function Login(props) {
     <p className="login">아이디 <input type="text" className="loginBox"></input></p>
     <p className="login">비밀번호 <input type="text" className="loginBox"></input></p>
 
-
   </article>
 }
+/*
+function Join() {
+  return (
+    <div className="center">
+      <Link to={'/pages/JoinMembership.js'}>회원가입</Link>
+    </div>
+  )
+}
+*/
 
 function App() {
   return (
@@ -34,9 +44,6 @@ function App() {
       <Center img='person'></Center>
       <Button name="로그인"></Button>
       <Login></Login>
-      <div className="join">
-        
-      </div>
     </div>
   );
 }
